@@ -5,6 +5,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import FlashCard from "./components/FlashCard";
 import FlashCardContainer from "./components/FlashCardContainer";
+import Landing from "./pages/Landing";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/flashcard" element={<FlashCardContainer />}/>
+          <Route path="/" element={<Landing />} />
         </Routes>
       </BrowserRouter>
     </>
