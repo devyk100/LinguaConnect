@@ -1,22 +1,19 @@
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import OneToOneCall from './pages/OneToOneCall'
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
-});
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import "./App.css";
+import Lobby from "./screens/Lobby";
+import Room from "./screens/Room";
 
-export default function App() {
+function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline/>
-      <OneToOneCall />
-    </ThemeProvider>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/lobby" element={<Lobby />} />
+          <Route path="/room/" element={<Room />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
+export default App;
