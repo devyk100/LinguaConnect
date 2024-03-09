@@ -1,17 +1,17 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "./App.css";
-import Lobby from "./screens/Lobby";
-import Room from "./screens/Room";
+import Flashcard from "./components/Flashcard";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
-          <Route path="/lobby" element={<Lobby />} />
-          <Route path="/room/" element={<Room />} />
+          <Route path="/lobby" element={<LobbyScreen />} />
+          <Route path="/room/:roomId" element={<RoomPage />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <Flashcard />
     </div>
   );
 }
